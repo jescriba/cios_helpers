@@ -6,8 +6,8 @@ require 'cios_helpers/version'
 Gem::Specification.new do |spec|
   spec.name          = "cios_helpers"
   spec.version       = CiosHelpers::VERSION
-  spec.authors       = ["Joshua Escribano"]
-  spec.email         = ["escribirajoshua@gmail.com"]
+  spec.authors       = ["Joshua Escribano", "Charles Wang"]
+  spec.email         = ["escribirajoshua@gmail.com", "charles@xamarin.com"]
   spec.description   = ""
   spec.summary       = ""
   spec.homepage      = ""
