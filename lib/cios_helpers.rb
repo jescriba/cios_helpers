@@ -44,4 +44,39 @@ module CiosHelpers
     trait # Return the one trait
   end
 
+    # Takes in a hash with the element key specified. 
+    # Touches the given element if it exists in the 
+    # current view.
+  def touch_if opts = {}
+    raise "No element given." if opts[:element].nil?
+    touch opts[:element] if element_exists opts[:element]
+  end
+
+    # Takes in an array of strings.
+    # Enters in the strings in order of 
+    # the TextField indices.
+  def enter_text_by_index arr = []
+    arr.each_with_index do |string, index|
+      unless query("TextField index:#{index}").empty?
+        touch "TextField index:#{index}"
+        wait_for_elements_exist ["Keyboard"]
+        keyboard_enter_text string
+      end
+    end
+  end
+
+    # Takes in a hash where the keys
+    # correspond to the ids or label of the 
+    # text fields and the values correspond
+    # to the strings you want to enter.
+  def enter_text opts = {}
+    opts.each do |key, value|
+      unless query("TextField marked:'#{key}'").empty?
+        touch "TextField marked:'#{key}'"
+        wait_for_elements_exist ["Keyboard"]
+        keyboard_enter_text value
+      end
+    end
+  end
+
 end
