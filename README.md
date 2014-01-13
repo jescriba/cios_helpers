@@ -1,6 +1,6 @@
 # CiosHelpers
 
-TODO: Write a gem description
+Provides convienent helper methods for Calabash-ios. 
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Documentation can be found here: http://rubygems.org/gems/cios_helpers
 
 ## Contributing
 
